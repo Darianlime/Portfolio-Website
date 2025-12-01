@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Darian Li - Ice Melts</title>
+
+  <style>
+    .project-page {
+      padding: 120px 20px 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .project-page h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .project-subtitle {
+      font-size: 18px;
+      margin-bottom: 40px;
+      opacity: 0.8;
+    }
+
+    .project-page img,
+    .project-page video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .project-section {
+      margin-bottom: 60px;
+      text-align: left;
+    }
+
+    .project-section h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .project-section p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .project-section ul {
+      padding-left: 25px;
+    }
+
+    .project-section li {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .gif-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .gif-container img {
+      width: 100%;
+      max-width: 650px;
+      border-radius: 8px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .gif-caption {
+      margin-top: 10px;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 20px auto 0 auto; 
+      font-size: 18px;
+      padding: 10px 18px;
+      border: 2px solid black;
+      border-radius: 6px;
+      transition: 0.15s;
+    }
+
+    .back-link:hover {
+      background: black;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="left">
+      <a href="/">Darian Li</a>
+    </div>
+
+    <div class="right">
+      <a href="https://github.com/Darianlime" target="_blank">
+        <i class="fa-brands fa-github"></i>
+        <span>Github</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/darian-li-6440672b2/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Linkedin</span>
+      </a>
+
+      <a href="darianli447@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Resume</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="project-page">
+
+    <h1>Ice Melts</h1>
+    <p class="project-subtitle">
+      2D puzzle platformer created with Unity  
+      <br>Transform between Ice • Water • Steam to solve physics-based challenges
+    </p>
+
+    <video class="img" controls playsinline>
+      <source src="../videos/NewIceMeltsGamePreview.mp4" type="video/mp4">
+    </video>
+
+    <p>
+      <a href="https://elftmann1.itch.io/ice-melts" target="_blank" class="back-link">
+        ▶ Play on Itch.io
+      </a>
+    </p>
+
+    <div class="project-section">
+      <h2>Overview</h2>
+      <p>
+        Ice Melts is a 2D puzzle platformer developed as part of the Video Game Development Club. 
+        You play as a block of ice that can transform between <strong>Ice</strong>, <strong>Water</strong>, 
+        and <strong>Steam</strong>, each offering unique mechanics for solving environmental puzzles.
+      </p>
+      <p>
+        I contributed to gameplay programming, state transitions, and the chain-creator system used 
+        by designers to build puzzle interactions quickly.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>What I Worked On</h2>
+      <ul>
+        <li>Implemented the <strong>state transformation system</strong> (Ice ↔ Water ↔ Smoke) .</li>
+        <li>Developed the <strong>Chain Creator</strong> Unity editor tool for puzzle scripting.</li>
+        <li>Worked with designers to build levels using the tool.</li>
+        <li>Helped polish movement, collisions, and environment interactions.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Transformation System</h2>
+      <p>
+        The core mechanic of Ice Melts is the ability to switch between three physical states, each with 
+        different movement, physics, and interactions:
+      </p>
+
+      <ul>
+        <li><strong>Ice:</strong> Solid, heavy, can push objects and resist wind.</li>
+        <li><strong>Water:</strong> Flows through cracks and chains, slips under obstacles.</li>
+        <li><strong>Steam:</strong> Floats upward, bypasses chains, blown by fans.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Chain Creator System</h2>
+      <p>
+        I developed a custom Unity editor tool called the Chain Creator, which lets designers place chains quickly without manually building each segment.
+      </p>
+
+      <div class="gif-container">
+        <video class="img" autoplay loop muted controls playsinline>
+            <source src="../videos/ChainCreatorFaster.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h2>Source Code</h2>
+      <p>
+        <a href="https://github.com/Darianlime/IceMelts" target="_blank" class="back-link">View Source Code</a>
+      </p>
+      <a href="../index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener('scroll', () => {
+      const header = document.querySelector('nav');
+      if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    })
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Darian Li</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="left">
+      <a href="/">Darian Li</a>
+    </div>
+
+    <div class="right">
+      <a href="https://github.com/Darianlime" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        <span>Github</span>
+      </a>
+      
+      <a href="https://www.linkedin.com/in/darian-li-6440672b2/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Linkedin</span>
+      </a>
+      
+      <a href="darianli447@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Resume</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+      <div class="text">
+        <h2>Hi, I'm Darian</h2>
+
+        <div class="links">
+          <a href="#aboutme">
+            <i class="fa-solid fa-pen"></i>
+            <span>About Me</span>
+          </a>
+          
+          <a href="#projects">
+            <i class="fa-solid fa-code"></i>
+            <span>Projects</span>
+          </a>
+          
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>XXXXX</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Languages -->
+    <section id="languages" class="languages-section">
+      <h2>Langaugaes</h2>
+
+      <div class="cells">
+        <div class="cell">
+          <img src="images/icons8-c++-96.png" alt="html logo">
+          <span>C++</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/icons8-c-sharp-logo-96.png" alt="css logo">
+          <span>C#</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/icons8-java-96.png" alt="javascript logo">
+          <span>Java</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Languages -->
+    <section id="development" class="development-section">
+      <h2>Development</h2>
+
+      <div class="cells">
+        <div class="cell">
+          <span>OpenGL</span>
+        </div>
+        
+        <div class="cell">
+          <span>Unity</span>
+        </div>
+        
+        <div class="cell">
+          <span>ENet</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Languages -->
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+
+      <div class="cells">
+        <a href="projects/racing-game.html" class="cell">
+          <span>2D Multiplayer Racing Game</span>
+
+          <video class="img" controls playsinline>
+            <source src="videos/CarGameShowcase.mp4" type="video/mp4">
+          </video>
+
+          <p>Solo Devolpment Project (WIP)</p>
+          <p>
+            A real-time multiplayer racing game built from scratch in C++ using OpenGL and ENet.
+            Designed to explore real-time physics, custom rendering, and modern networking techniques.
+          </p>
+        </a>
+        
+        <a href="projects/ice-melts.html" class="cell">
+          <span>Ice Melts</span>
+
+          <video class="img" controls playsinline>
+            <source src="videos/NewIceMeltsGamePreview.mp4" type="video/mp4">
+          </video>
+
+          <p>Group Project made in Video Game Development Club</p>
+          <p>Ice Melts is a 2D puzzle platformer developed in Unity. 
+            You play as a block of ice with the unique ability to transform between ice, water, and steam
+             to navigate puzzles, obstacles, and environmental challenges.
+          </p> 
+        </a>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('scroll', ()=> {
+        const header = document.querySelector('nav');
+
+        if (window.scrollY > 0) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      })
+    </script>
+
+    <script>
+    document.querySelectorAll("video").forEach(v => {
+      v.addEventListener("click", (e) => {
+        e.preventDefault();  
+        e.stopPropagation();
+        v.play();          
+      });
+    });
+  </script>
+  </main>
+</body>
+</html>
