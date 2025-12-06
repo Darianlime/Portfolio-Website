@@ -174,7 +174,7 @@
   <h2>Networking Comparison</h2>
   <p>
     This section demonstrates how networking features improve gameplay responsiveness and smoothness.
-     (Note: Client and Server is running on 10 hz and a higher ping for showcasing)
+     <strong>(Note: Client and Server is running on 10 hz and a higher ping for showcasing)</strong>
   </p>
 
   <div class="gif-grid">
@@ -221,8 +221,11 @@
       <p><strong>Desync during high latency:</strong> Clients drifted from server state.</p>
       <p>→ Implemented input history rewind with tick-based replay for deterministic correction.</p>
 
-      <p><strong>Collision Jitter On Client Side for Remote Clients:</strong> Other Clients collided with caused jitters but not on remote clients side.</p>
-      <p>→ Added reconciliation for collisions for the Remote Clients on the screen so it interpolates collisions correctly.</p>
+      <p><strong>Collision jitter on remote clients:</strong> Collisions with other players caused local jitter but appeared inconsistent on remote clients.</p>
+      <p>→ Added collision reconciliation for remote clients, ensuring collisions interpolate correctly on screen.</p>
+
+      <p><strong>Collision checks being O(n<sup>2</sup>):</strong>  Caused high latency when many clients were connected.</p>
+      <p>→ Implemented a tile-based spatial partitioning system that queries only surrounding tiles and pools nearby vertices, reducing collision complexity to <strong>O(n · k)</strong> (near-linear in practice).</p>
     </div>
 
     <div class="project-section">
